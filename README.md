@@ -1,6 +1,6 @@
 # LPS-Shock
 
-Modelling temperature response to LPS-shock
+## Modelling temperature response to LPS-shock
 
 This repository contains R-Code, experimentally and *in silico* produced data for the purpose of fitting response curves to LPS-induced hypothermia in mice with the drc-package in R.
 
