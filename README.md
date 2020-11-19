@@ -16,4 +16,4 @@ The proposed model and the R-coded algorithm has been used previously for the an
 
 **Sören Reinke, Mary Linge, Hans H. Diebner, Hella Luksch, Silke Glage, Anne Gocht, Avril A.B. Robertson, Matthew A. Cooper, Sigrun R. Hofmann, Ronald Naumann, Mihail Sarov, Rayk Behrendt, Axel Roers, Frank Pessler, Joachim Roesler, Angela Rösen-Wolff, Stefan Winkler: Non-canonical Caspase-1 signaling drives RIP2 dependent and TNF-α mediated inflammation in vivo, Cell Reports, Volume 30, Issue 8, 25 February 2020, Pages 2501-2511.e5, https://doi.org/10.1016/j.celrep.2020.01.090**
 
-File LPS-Shock.rmd contains the R source code. The code contains commands to load data as well as fitted models stored as ".rds".
+File **LPS-Shock.rmd** contains the R source code. The code contains commands to load data as well as fitted models stored as ".rds". 
