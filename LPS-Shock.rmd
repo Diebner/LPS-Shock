@@ -230,7 +230,7 @@ legend("bottomright", legend=c(expression(paste("k=0.4, ",p[0],"=0.25")),
 # Load data
 
 ```{r include=TRUE, echo=FALSE}
-data<-readRDS("data/data_DiebnerEtAl.rds")
+data<-readRDS("data_DiebnerEtAl.rds")
 head(data)
 ## Parameter start values for fitting with drm:
   temperatureStart <- function(data) {
@@ -284,7 +284,7 @@ if(FALSE){
 
 ```{r eval=TRUE, include=TRUE, echo=FALSE}
 ## Load one of the fits
-fit2<-readRDS("data/fit2019_2_s3_G-G-G-G.rds")
+fit2<-readRDS("fit2019_2_s3_G-G-G-G.rds")
 
 ## Extract the parameters for genotype Casp1 WT
 parms<-c(coef(fit2)[5],coef(fit2)[11],coef(fit2)[17],coef(fit2)[23])
@@ -317,11 +317,11 @@ The two AUCs are almost the same
 
 ```{r eval=TRUE, include=TRUE, echo=FALSE, fig.height = 10, fig.width = 14}
 ## Load data including the AUCs:
-  data_auc <- readRDS("data/AUC_data_Fig2A.rds")
-  # data_auc <- readRDS("data/AUC_data_Fig2A_48.rds")
+  data_auc <- readRDS("AUC_data_Fig2A.rds")
+  # data_auc <- readRDS("AUC_data_Fig2A_48.rds")
   # dim(data_auc)
   par(mfrow = c(2, 2))
-  fit2b <- readRDS("data/fit2019_2_s3_1-1-G-G.rds")
+  fit2b <- readRDS("fit2019_2_s3_1-1-G-G.rds")
   ## plot the temperature-courses for each genotype for an overview:
   plot(fit2b, type="average", legendPos = c(55.0,3.4), cex.legend=0.8, log="", legend=T,
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
@@ -755,23 +755,23 @@ if(FALSE){
 ```{r eval=TRUE, include=TRUE, echo=FALSE, fig.width=14, fig.height=20}
   ######################## The s=1 Series #####################################################
   par(mfrow=c(3,2), mar=c(5, 5, 4, 2) + 0.1)
-  fit0<-readRDS("data/fit2019_2_s1_G-G-G-G.rds")
+  fit0<-readRDS("fit2019_2_s1_G-G-G-G.rds")
   plot(fit0, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=1")
-  fit0a<-readRDS("data/fit2019_2_s1_1-G-G-G.rds")
+  fit0a<-readRDS("fit2019_2_s1_1-G-G-G.rds")
   plot(fit0a, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=1")
-  fit0b<-readRDS("data/fit2019_2_s1_1-1-G-G.rds")
+  fit0b<-readRDS("fit2019_2_s1_1-1-G-G.rds")
   plot(fit0b, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=1")
-  fit0c<-readRDS("data/fit2019_2_s1_1-1-1-G.rds")
+  fit0c<-readRDS("fit2019_2_s1_1-1-1-G.rds")
   plot(fit0c, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=1")
-  fit0d<-readRDS("data/fit2019_2_s1_1-1-G-1.rds")
+  fit0d<-readRDS("fit2019_2_s1_1-1-G-1.rds")
   plot(fit0d, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=1")
@@ -784,23 +784,23 @@ if(FALSE){
   
   ######################## The s=2 Series #####################################################
   par(mfrow=c(3,2), mar=c(5, 5, 4, 2) + 0.1)
-  fit1<-readRDS("data/fit2019_2_s2_G-G-G-G.rds")
+  fit1<-readRDS("fit2019_2_s2_G-G-G-G.rds")
   plot(fit1, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=2")
-  fit1a<-readRDS("data/fit2019_2_s2_1-G-G-G.rds")
+  fit1a<-readRDS("fit2019_2_s2_1-G-G-G.rds")
   plot(fit1a, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=2")
-  fit1b<-readRDS("data/fit2019_2_s2_1-1-G-G.rds")
+  fit1b<-readRDS("fit2019_2_s2_1-1-G-G.rds")
   plot(fit1b, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=2")
-  fit1c<-readRDS("data/fit2019_2_s2_1-1-1-G.rds")
+  fit1c<-readRDS("fit2019_2_s2_1-1-1-G.rds")
   plot(fit1c, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=2")
-  fit1d<-readRDS("data/fit2019_2_s2_1-1-G-1.rds")
+  fit1d<-readRDS("fit2019_2_s2_1-1-G-1.rds")
   plot(fit1d, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=2")
@@ -818,30 +818,30 @@ if(FALSE){
   ######################## The s=3 Series #####################################################
   
   par(mfrow=c(3,2), mar=c(5, 5, 4, 2) + 0.1)
-  fit2<-readRDS("data/fit2019_2_s3_G-G-G-G.rds")
+  fit2<-readRDS("fit2019_2_s3_G-G-G-G.rds")
   plot(fit2, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=3")
-  fit2a<-readRDS("data/fit2019_2_s3_1-G-G-G.rds")
+  fit2a<-readRDS("fit2019_2_s3_1-G-G-G.rds")
   plot(fit2a, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=3")
-  fit2b<-readRDS("data/fit2019_2_s3_1-1-G-G.rds")
+  fit2b<-readRDS("fit2019_2_s3_1-1-G-G.rds")
   plot(fit2b, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=3")
-  fit2c<-readRDS("data/fit2019_2_s3_1-1-1-G.rds")
+  fit2c<-readRDS("fit2019_2_s3_1-1-1-G.rds")
   plot(fit2c, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=3")
-  fit2d<-readRDS("data/fit2019_2_s3_1-1-G-1.rds")
+  fit2d<-readRDS("fit2019_2_s3_1-1-G-1.rds")
   plot(fit2d, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, 
        pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), 
        xlab="time [h]", ylab="log(T(t))", main="s=3")
 
 ######################## The s=4 Series #####################################################
 
-fit3<-readRDS("data/fit2019_2_s4_G-G-G-G.rds")
+fit3<-readRDS("fit2019_2_s4_G-G-G-G.rds")
 plot(fit3, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), xlab="time [h]", ylab="log(T(t))", main="s=4")
 
 dchisq(2*logLik(fit2)-2*logLik(fit3),1) 
@@ -860,63 +860,63 @@ plot(fit2a, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", le
      col=c(1,2,3,4,5,6), xlim=c(0,50), ylim=c(3.2,3.65), xlab="time [h]", ylab="log(T(t))", main="")
 
 p<-NULL
-fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("data/fit2019_2_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("fit2019_2_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1C284AxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KO<-readRDS("data/fit2019_2_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KO<-readRDS("fit2019_2_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("data/fit2019_2_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("fit2019_2_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KOxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WT<-readRDS("data/fit2019_2_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WT<-readRDS("fit2019_2_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WT,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("data/fit2019_2_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("fit2019_2_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WTxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("data/fit2019_2_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("fit2019_2_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("data/fit2019_2_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("fit2019_2_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("data/fit2019_2_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("fit2019_2_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WT,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit2019_2_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit2019_2_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("data/fit2019_2_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("fit2019_2_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1KOxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WT <- readRDS("data/fit2019_2_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WT <- readRDS("fit2019_2_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WT,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("data/fit2019_2_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("fit2019_2_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WTxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("data/fit2019_2_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("fit2019_2_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WT,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit2019_2_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit2019_2_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("data/fit2019_2_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("fit2019_2_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1WTvsCasp1WTxRIP2KO,fit2a,test="LRT")
 p<-c(p,a$`p value`[2])
 
@@ -927,67 +927,67 @@ round(p.adjust(p, method = "BH", n = length(p)),digits=4)
 #####           LRT: 6 time series per genotype reduced data set                                           #########
 ####################################################################################################################
 
-fit2a_reduced<-readRDS("data/fit_6ts1_s3_1-G-G-G.rds")
+fit2a_reduced<-readRDS("fit_6ts1_s3_1-G-G-G.rds")
 plot(fit2a_reduced, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), xlab="time [h]", ylab="log(T(t))", main="s=3")
 
 p<-NULL
-fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("data/fit_6ts1_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("fit_6ts1_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1C284AxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KO<-readRDS("data/fit_6ts1_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KO<-readRDS("fit_6ts1_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("data/fit_6ts1_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("fit_6ts1_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WT<-readRDS("data/fit_6ts1_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WT<-readRDS("fit_6ts1_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("data/fit_6ts1_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("fit_6ts1_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("data/fit_6ts1_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("fit_6ts1_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("data/fit_6ts1_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("fit_6ts1_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("data/fit_6ts1_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("fit_6ts1_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts1_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts1_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("data/fit_6ts1_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("fit_6ts1_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WT <- readRDS("data/fit_6ts1_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WT <- readRDS("fit_6ts1_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts1_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts1_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("data/fit_6ts1_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("fit_6ts1_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts1_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts1_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts1_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("fit_6ts1_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1WTvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
@@ -998,67 +998,67 @@ round(p.adjust(p, method = "BH", n = length(p)),digits=4)
 #####   Another to 6 time series per genotype reduced data set                                             #########
 ####################################################################################################################
 
-fit2a_reduced<-readRDS("data/fit_6ts2_s3_1-G-G-G.rds")
+fit2a_reduced<-readRDS("fit_6ts2_s3_1-G-G-G.rds")
 plot(fit2a_reduced, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), xlab="time [h]", ylab="log(T(t))", main="s=3")
 
 p<-NULL
-fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("data/fit_6ts2_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("fit_6ts2_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1C284AxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KO<-readRDS("data/fit_6ts2_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KO<-readRDS("fit_6ts2_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("data/fit_6ts2_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("fit_6ts2_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WT<-readRDS("data/fit_6ts2_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WT<-readRDS("fit_6ts2_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("data/fit_6ts2_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("fit_6ts2_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("data/fit_6ts2_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("fit_6ts2_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("data/fit_6ts2_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("fit_6ts2_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("data/fit_6ts2_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("fit_6ts2_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts2_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts2_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("data/fit_6ts2_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("fit_6ts2_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WT <- readRDS("data/fit_6ts2_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WT <- readRDS("fit_6ts2_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts2_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts2_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("data/fit_6ts2_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("fit_6ts2_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts2_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts2_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts2_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("fit_6ts2_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1WTvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
@@ -1069,67 +1069,67 @@ round(p.adjust(p, method = "BH", n = length(p)),digits=4)
 #####   Another to 6 time series per genotype reduced data set                                             #########
 ####################################################################################################################
 
-fit2a_reduced<-readRDS("data/fit_6ts3_s3_1-G-G-G.rds")
+fit2a_reduced<-readRDS("fit_6ts3_s3_1-G-G-G.rds")
 plot(fit2a_reduced, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), xlab="time [h]", ylab="log(T(t))", main="s=3")
 
 p<-NULL
-fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("data/fit_6ts3_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1C284AxRIP2KO<-readRDS("fit_6ts3_Casp1C284AvsCasp1C284AxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1C284AxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KO<-readRDS("data/fit_6ts3_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KO<-readRDS("fit_6ts3_Casp1C284AvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("data/fit_6ts3_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1KOxRIP2KO<-readRDS("fit_6ts3_Casp1C284AvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WT<-readRDS("data/fit_6ts3_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WT<-readRDS("fit_6ts3_Casp1C284AvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("data/fit_6ts3_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AvsCasp1WTxRIP2KO<-readRDS("fit_6ts3_Casp1C284AvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("data/fit_6ts3_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KO <- readRDS("fit_6ts3_Casp1C284AxRIP2KOvsCasp1KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("data/fit_6ts3_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO <- readRDS("fit_6ts3_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("data/fit_6ts3_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WT <- readRDS("fit_6ts3_Casp1C284AxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts3_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts3_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1C284AxRIP2KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("data/fit_6ts3_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1KOxRIP2KO <- readRDS("fit_6ts3_Casp1KOvsCasp1KOxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1KOxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WT <- readRDS("data/fit_6ts3_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WT <- readRDS("fit_6ts3_Casp1KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts3_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts3_Casp1KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("data/fit_6ts3_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WT <- readRDS("fit_6ts3_Casp1KOxRIP2KOvsCasp1WT_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WT,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts3_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO <- readRDS("fit_6ts3_Casp1KOxRIP2KOvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1KOxRIP2KOvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
-fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("data/fit_6ts3_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
+fit2a_Casp1WTvsCasp1WTxRIP2KO <- readRDS("fit_6ts3_Casp1WTvsCasp1WTxRIP2KO_s3_1-G-G-G.rds")
 a<-anova(fit2a_Casp1WTvsCasp1WTxRIP2KO,fit2a_reduced,test="LRT")
 p<-c(p,a$`p value`[2])
 
@@ -1144,7 +1144,7 @@ round(p.adjust(p, method = "BH", n = length(p)),digits=4)
 pairwise.t.test(data$Temperature[data$Time==24], data$Genotype[data$Time==24], p.adjust.method = "BH", paired = FALSE, alternative = c("two.sided"))
 pairwise.wilcox.test(data$Temperature[data$Time==24], data$Genotype[data$Time==24], p.adjust.method = "BH", paired = FALSE, alternative = c("two.sided"))
 
-fit2b<-readRDS("data/fit2019_2_s3_1-1-G-G.rds")
+fit2b<-readRDS("fit2019_2_s3_1-1-G-G.rds")
 plot(fit2b, type="average", legendPos = c(55.0,3.32), cex.legend=0.8, log="", legend=T, pch=c(19,17,19,17,19,17), col=c(2,2,4,4,1,1), lty=c(1,2,1,2,1,2), xlim=c(0,50), ylim=c(3.2,3.65), xlab="time [h]", ylab="log(T(t))", main="s=3")
 dchisq(2*logLik(fit2)-2*logLik(fit1),1) # 
 dchisq(2*logLik(fit2)-2*logLik(fit0),2) # 
